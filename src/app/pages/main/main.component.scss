@@ -1,0 +1,25 @@
+@import "../../../colors.scss";
+
+main {
+  margin-top: 120px;
+  .splash-welcome {
+    padding: 10px;
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid;
+    color: $red;
+    text-align: center;
+    h2 {
+      font-weight: 600;
+    }
+  }
+  .sort-row {
+    margin-bottom: 15px;
+    span {
+      display: block;
+      text-align: center;
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}

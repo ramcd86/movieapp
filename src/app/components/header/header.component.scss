@@ -1,0 +1,42 @@
+.header {
+  height: 220px;
+
+  &__logo {
+    img {
+      height: 200px;
+      width: 200px;
+      cursor: pointer;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    app-text-input,
+    app-button {
+      min-width: 180px;
+    }
+  }
+}
+
+@media (max-width: 783px) {
+  .header {
+    &__logo img {
+      height: 100px;
+      width: 100px;
+    }
+    &__search {
+      app-text-input,
+      app-button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

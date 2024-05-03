@@ -1,0 +1,52 @@
+@import "../../../colors.scss";
+
+.tile {
+  height: 420px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-position: center center;
+  background-size: cover;
+  padding: 20px;
+  transition: box-shadow 0.3s, opacity 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  &__subcontainer {
+    background: rgba(255, 255, 255, 0.9);
+    height: 380px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  &__content {
+    h3 {
+      color: $red;
+      text-align: center;
+      font-weight: 600;
+      height: 60px;
+    }
+    p {
+      color: $black;
+      height: 160px;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  &__content__rating {
+    text-align: center;
+    margin-bottom: 10px;
+    span {
+      color: $red;
+      display: block;
+    }
+    i {
+      color: $red;
+    }
+  }
+  &__actions {
+    text-align: center;
+  }
+}

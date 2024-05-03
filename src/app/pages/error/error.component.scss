@@ -1,0 +1,13 @@
+@import "../../../colors.scss";
+
+main {
+  margin-top: 120px;
+  .error {
+    text-align: center;
+    h1 {
+      font-size: 66px;
+      color: $red;
+      font-weight: 600;
+    }
+  }
+}

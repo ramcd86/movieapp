@@ -1,0 +1,32 @@
+<div
+  class="tile"
+  style="background-image: url('{{ movieItem?.getPoster() }}');"
+>
+  <div class="tile__subcontainer">
+    <div class="tile__content">
+      <h3>{{ movieItem?.getTitle() }}</h3>
+      <p>{{ movieItem?.getPlot() }}</p>
+      <div class="tile__content__rating">
+        @for (movieItem of [].constructor(this.getRoundedImbdbRating()); track
+        movieItem) {
+        <i class="bx bxs-star"></i> }
+        <span
+          >({{ movieItem?.getYear() }}) ({{ movieItem?.getImdbRating() }})
+        </span>
+      </div>
+    </div>
+    <div class="tile__actions">
+      @if (movieItem?.getTitle() === 'Space Jam') {
+      <app-button
+        [label]="'COME ON AND SLAM!'"
+        [url]="'https://www.spacejam.com/1996/'"
+      ></app-button>
+      } @else {
+      <app-button
+        [label]="'View Details'"
+        (buttonClick)="this.emitMovie.emit(movieItem)"
+      ></app-button>
+      }
+    </div>
+  </div>
+</div>

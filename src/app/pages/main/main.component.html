@@ -1,0 +1,46 @@
+<main>
+  <div class="splash-welcome">
+    <h2>
+      Movies we're wild about right now! <i class="bx bxs-camera-movie"></i>
+    </h2>
+  </div>
+  <div class="row sort-row">
+    <div class="col-md-4 col-12">
+      <span (click)="sortBy(sort.ALPHABETICALLY)"
+        >Sort Alphabetically @if(alphaSort && alphaSort === sortOrder.ASC) {
+        <i class="bx bx-chevron-up"></i>
+        } @if(alphaSort && alphaSort === sortOrder.DESC) {
+        <i class="bx bx-chevron-down"></i>
+        }
+      </span>
+    </div>
+    <div class="col-md-4 col-12">
+      <span (click)="sortBy(sort.RATING)"
+        >Sort by Rating @if (ratingSort && ratingSort === sortOrder.ASC) {
+        <i class="bx bx-chevron-up"></i>
+        } @if (ratingSort && ratingSort === sortOrder.DESC) {
+        <i class="bx bx-chevron-down"></i>
+        }
+      </span>
+    </div>
+    <div class="col-md-4 col-12">
+      <span (click)="sortBy(sort.YEAR)"
+        >Sort by Year @if (yearSort && yearSort === sortOrder.ASC) {
+        <i class="bx bx-chevron-up"></i>
+        } @if (yearSort && yearSort === sortOrder.DESC) {
+        <i class="bx bx-chevron-down"></i>
+        }
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    @for (movieItem of topMoviesList; track movieItem.getTitle()) {
+    <div class="col-lg-4 col-md-6 col-12 mb-4">
+      <app-movie-tile
+        [movieItem]="movieItem"
+        (emitMovie)="this.search($event.getTitle())"
+      ></app-movie-tile>
+    </div>
+    }
+  </div>
+</main>

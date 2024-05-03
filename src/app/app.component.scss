@@ -1,0 +1,21 @@
+@import "../colors.scss";
+
+.layout {
+  display: block;
+  position: relative; /* Establishes a stacking context */
+}
+
+.layout::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  background-image: url("./../assets/moviezonebg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  border-bottom: 60px solid $red;
+}

@@ -1,0 +1,19 @@
+<div class="button-wrapper">
+  @if (url) {
+  <a href="{{ url }}" target="_blank">
+    <button>
+      {{ label }}
+      @if(iconString) {
+      <i class="{{ iconString }}"></i>
+      }
+    </button>
+  </a>
+  } @else {
+  <button (click)="this.buttonClick.emit()">
+    {{ label }}
+    @if(iconString) {
+    <i class="{{ iconString }}"></i>
+    }
+  </button>
+  }
+</div>

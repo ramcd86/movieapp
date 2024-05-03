@@ -1,0 +1,40 @@
+<main>
+  <div class="row movie-details">
+    <div class="col-md-6 col-12 movie-details__info">
+      <h1>
+        {{ selectedMovie?.getTitle() }}
+      </h1>
+      <div class="movie-details__imdb">
+        <a href="http://www.imdb.com/title/{{ selectedMovie?.getImdbID() }}"
+          >View in imdb </a
+        ><i class="bx bx-right-top-arrow-circle"></i>
+
+        ( @for (star of [].constructor(this.getRoundedImbdbRating()); track
+        star) {
+        <i class="bx bxs-star"></i> } )
+      </div>
+
+      <h2>
+        {{ selectedMovie?.getPlot() }}
+      </h2>
+
+      <span>Released in: {{ selectedMovie?.getYear() }}</span>
+      <span>Rated: {{ selectedMovie?.getRated() }}</span>
+      <span>Runtime: {{ selectedMovie?.getRuntime() }}</span>
+      <span>Genre: {{ selectedMovie?.getGenre() }}</span>
+      <span>Director: {{ selectedMovie?.getDirector() }}</span>
+      <span>Actors: {{ selectedMovie?.getActors() }}</span>
+      <span>Language(s): {{ selectedMovie?.getLanguage() }}</span>
+      <span>Country: {{ selectedMovie?.getCountry() }}</span>
+      <span>Box Office: {{ selectedMovie?.getBoxOffice() }}</span>
+      <span>Production: {{ selectedMovie?.getProduction() }}</span>
+      <span>Awards: {{ selectedMovie?.getAwards() }}</span>
+      <span>IMDB Votes: {{ selectedMovie?.getImdbVotes() }}</span>
+      <span>DVD: {{ selectedMovie?.getDvd() }}</span>
+    </div>
+    <div
+      class="col-md-6 col-12 movie-details__banner"
+      style="background-image: url('{{ selectedMovie?.getPoster() }}');"
+    ></div>
+  </div>
+</main>
