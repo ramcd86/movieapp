@@ -13335,7 +13335,7 @@ var Oi = (() => {
       this.http = p(Xa);
     }
     urlBuilder(n) {
-      return `http://www.omdbapi.com?apikey=8ea39b15&t=${n}`;
+      return `https://www.omdbapi.com?apikey=8ea39b15&t=${n}`;
     }
     getMovieData(n) {
       return this.http.get(this.urlBuilder(n));
