@@ -13560,7 +13560,7 @@ var Oh = (() => {
         [1, "col-4", "header__logo"],
         [
           "src",
-          "./../../../moviezone/assets/moviezonelogo.png",
+          "./../../../movieapp/assets/moviezonelogo.png",
           "alt",
           "The movie zone!",
           3,
