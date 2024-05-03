@@ -73,18 +73,24 @@ export class MainComponent {
           this.ratingSort === this.sortOrder.DESC || !this.ratingSort
             ? this.sortOrder.ASC
             : this.sortOrder.DESC;
+        this.yearSort = undefined;
+        this.alphaSort = undefined;
         break;
       case this.sort.YEAR:
         this.yearSort =
           this.yearSort === this.sortOrder.DESC || !this.yearSort
             ? this.sortOrder.ASC
             : this.sortOrder.DESC;
+        this.alphaSort = undefined;
+        this.ratingSort = undefined;
         break;
       case this.sort.ALPHABETICALLY:
         this.alphaSort =
           this.alphaSort === this.sortOrder.DESC || !this.alphaSort
             ? this.sortOrder.ASC
             : this.sortOrder.DESC;
+        this.yearSort = undefined;
+        this.ratingSort = undefined;
         break;
       default:
         break;

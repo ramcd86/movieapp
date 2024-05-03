@@ -17,6 +17,7 @@ export class ResultsComponent {
   public selectedMovie?: MovieItem;
 
   public ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.activatedRoute.data.subscribe((data) => {
       const movie = data['resultsData'];
       this.selectedMovie = new MovieItem()

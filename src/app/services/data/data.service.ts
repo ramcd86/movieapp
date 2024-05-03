@@ -34,7 +34,7 @@ export class DataService {
   private readonly http: HttpClient = inject(HttpClient);
 
   private urlBuilder(query: string): string {
-    return `http://www.omdbapi.com?apikey=8ea39b15&t=${query}`;
+    return `https://www.omdbapi.com?apikey=8ea39b15&t=${query}`;
   }
 
   public getMovieData(query: string): Observable<any> {
